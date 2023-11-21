@@ -1,4 +1,4 @@
-import { emptyDir } from "std/fs/empty_dir.ts";
+import { emptyDir } from "https://deno.land/std@0.207.0/fs/empty_dir.ts";
 import { cacheDirList } from "./src/cache_dir_list.ts";
 import { isReadableDir } from "./src/dir.ts";
 
