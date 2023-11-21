@@ -1,0 +1,7 @@
+{
+  "lock": false,
+  "tasks": {
+    "start": "deno run -A cli.ts"
+  },
+  "importMap": "import_map.json"
+}

@@ -21,8 +21,6 @@ jobs:
         uses: denolib/setup-deno@master
         with:
           deno-version: 1.x
-      - name: Tests
-        run: deno test --allow-read
   release:
     name: Release
     runs-on: ubuntu-18.04

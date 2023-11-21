@@ -1,8 +1,8 @@
-import { mode } from "./mod.ts";
+import { clearCaches } from "./mod.ts";
+import { permissionCheck } from "./src/permission.ts";
 
-// https://deno.land/manual/tools/script_installer
-if (import.meta.main) {
-  for (let arg of Deno.args) {
-    console.log(arg, mode());
-  }
+const permissions = await permissionCheck();
+
+if (import.meta.main && permissions) {
+  await clearCaches();
 }
