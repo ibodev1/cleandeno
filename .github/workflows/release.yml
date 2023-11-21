@@ -1,0 +1,36 @@
+name: Release CI
+on:
+  push:
+    branches:
+      - master
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+env:
+  GH_TOKEN : ${{ secrets.GH_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "lts/*"
+      - name: Setup package.json
+        run: echo '{"name":"@ibodev1/cleandeno","version":"0.0.0","scripts":{"semantic-release":"semantic-release"},"repository":{"type":"git","url":"https://github.com/ibodev1/cleandeno.git"},"license":"MIT","bugs":{"url":"https://github.com/ibodev1/cleandeno/issues"},"homepage":"https://ibodev1.github.io/cleandeno/","devDependencies":{"semantic-release":"^21.0.1", "@semantic-release/github":"^8.0.7","@semantic-release/git":"^10.0.1","semantic-release-gitmoji":"^1.6.4"}}' > package.json
+      - name: Install dependencies
+        run: npm install
+      - name: Npm CI
+        run: npm ci
+      - name: Release
+        env:
+          GH_TOKEN : ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release
