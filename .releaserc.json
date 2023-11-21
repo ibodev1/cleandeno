@@ -1,4 +1,6 @@
 {
+  "repositoryUrl": "https://github.com/ibodev1/drux.git",
+  "branches": ["master"],
   "plugins": [
     [
       "semantic-release-gitmoji",
@@ -10,7 +12,9 @@
         }
       }
     ],
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
     "@semantic-release/github",
-    "@semantic-release/npm"
+    "@semantic-release/git"
   ]
 }
