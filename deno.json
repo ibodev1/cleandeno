@@ -1,6 +1,10 @@
 {
+  "name": "@ibodev/cleandeno",
+  "version": "0.0.1",
+  "exports": "./mod.ts",
   "lock": false,
   "tasks": {
     "start": "deno run -A cli.ts"
-  }
+  },
+  "importMap": "./vendor/import_map.json"
 }
