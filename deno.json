@@ -1,9 +1,12 @@
 {
   "name": "@ibodev/cleandeno",
   "version": "2.0.0",
-  "exports": "./mod.ts",
+  "exports": "./cli.ts",
   "lock": false,
   "tasks": {
     "start": "deno run -A cli.ts"
+  },
+  "imports": {
+    "@std/fs": "jsr:@std/fs@^1.0.19"
   }
 }
