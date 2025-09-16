@@ -1,6 +1,7 @@
 # 🏁 Clean Deno
 
-`deno info` package to clean the inside of directories ending with cache from incoming deno directories.
+`deno info` package to clean the inside of directories ending with cache from
+incoming deno directories.
 
 [![GitHub](https://img.shields.io/github/license/ibodev1/cleandeno)](https://github.com/ibodev1/cleandeno/blob/master/LICENSE)
 [![Made by ibodev1](https://img.shields.io/badge/made%20by-ibodev1-0082fb)](https://github.com/ibodev1)
@@ -36,12 +37,3 @@ Required permissions:
 ## 📄 License
 
 MIT © [ibodev1](https://github.com/ibodev1)
-
-<p align="center">
-  <a href="https://github.com/ibodev1">
-    <img width="100" alt="" src="https://raw.githubusercontent.com/denorg/denorg/master/logo.svg">
-  </a>
-</p>
-<p align="center">
-  <sub>A project by <a href="https://github.com/ibodev1">@ibodev1</a>, the world's first Deno-focused community<br>organization and consulting company. <a href="https://github.com/ibodev1">Work with us →</a></sub>
-</p>
